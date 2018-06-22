@@ -1,8 +1,14 @@
 import React from "react";
 
-function Movie({ movie }) {
+function Movie({ movie, receiveMainPoster }) {
+  function handleClick(event) {
+    event.preventDefault();
+
+    receiveMainPoster(movie.Poster);
+  }
+
   return (
-    <a className="app__movies__movie" id={movie.imdbID}>
+    <a className="app__movies__movie" id={movie.imdbID} onClick={handleClick}>
       <img
         src={
           movie.Poster === "N/A"

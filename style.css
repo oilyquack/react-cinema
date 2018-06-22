@@ -14,8 +14,12 @@ body {
 }
 
 .app__display {
-  height: 50px;
+  height: 60vh;
   border: solid 2px black;
+}
+
+.app__display--poster {
+  height: 50vh;
 }
 
 .app__movies {
@@ -24,6 +28,6 @@ body {
 }
 
 .app__movies__movie--img {
-  height: 20vh;
-  padding: 10px;
+  height: 15vh;
+  padding: 20px;
 }
