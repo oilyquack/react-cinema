@@ -18,6 +18,7 @@ class App extends React.Component {
     this.setState({
       movies: movies.Search
     });
+    console.log(movies);
   }
 
   render() {

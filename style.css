@@ -20,4 +20,10 @@ body {
 
 .app__movies {
   border: solid 2px black;
+  padding: 20px;
+}
+
+.app__movies__movie--img {
+  height: 20vh;
+  padding: 10px;
 }
