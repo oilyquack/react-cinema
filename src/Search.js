@@ -30,7 +30,7 @@ class Search extends React.Component {
     )
       .then(response => response.json())
       .then(result => {
-        console.log(result);
+        this.props.receiver(result);
       })
       .catch(error => {
         console.log("Sorry, I couldn't find that. Try another film.");
