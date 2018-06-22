@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Display from "./Display";
+import Movies from "./Movies";
 
 class App extends React.Component {
   constructor() {
@@ -17,7 +18,6 @@ class App extends React.Component {
     this.setState({
       movies: movies.Search
     });
-    console.log(this.state.movies);
   }
 
   render() {
@@ -26,6 +26,8 @@ class App extends React.Component {
         <Header receiver={this.receiver} />
 
         <Display />
+
+        <Movies movies={this.state.movies} />
       </div>
     );
   }
