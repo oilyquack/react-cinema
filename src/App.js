@@ -21,7 +21,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
         <Header receiver={this.receiver} />
       </div>
     );

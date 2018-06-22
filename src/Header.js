@@ -3,7 +3,7 @@ import Search from "./Search";
 
 function Header({ receiver }) {
   return (
-    <div className="header">
+    <div className="app__header">
       <header>
         <h1>React Cinema</h1>
       </header>

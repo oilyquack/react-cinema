@@ -4,7 +4,7 @@ const config = {
   api: {
     omdb: {
       apiKey: "a46e4310",
-      movie: "The Network",
+      movie: "Network",
       url: "http://www.omdbapi.com/"
     }
   }
@@ -15,11 +15,15 @@ class Search extends React.Component {
     super();
 
     this.state = {
-      movie: ""
+      movie: config.api.omdb.movie
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    this.fetchMovie();
   }
 
   fetchMovie() {
