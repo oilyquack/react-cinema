@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
+import Header from "./Header";
 
 class App extends React.Component {
-  constructor(){
+  constructor() {
     super();
   }
 
-  render(){
+  render() {
     return (
       <div>
-        React cinema app
+        <Header />
       </div>
-    )
+    );
   }
 }
 
