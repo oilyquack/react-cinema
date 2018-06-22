@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Display from "./Display";
 
 class App extends React.Component {
   constructor() {
@@ -23,6 +24,8 @@ class App extends React.Component {
     return (
       <div className="app">
         <Header receiver={this.receiver} />
+
+        <Display />
       </div>
     );
   }
