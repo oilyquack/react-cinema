@@ -9,7 +9,8 @@ class App extends React.Component {
 
     this.state = {
       movies: [],
-      mainPoster: ""
+      mainPoster: "",
+      movie: []
     };
 
     this.receiver = this.receiver.bind(this);
@@ -24,11 +25,12 @@ class App extends React.Component {
     console.log(movies);
   }
 
-  receiveMainPoster(mainPoster) {
+  receiveMainPoster(mainPoster, movie) {
     this.setState({
-      mainPoster
+      mainPoster,
+      movie
     });
-    console.log(mainPoster);
+    console.log(movie);
   }
 
   render() {
@@ -36,7 +38,7 @@ class App extends React.Component {
       <div className="app">
         <Header receiver={this.receiver} />
 
-        <Display mainPoster={this.state.mainPoster} />
+        <Display mainPoster={this.state.mainPoster} movie={this.state.movie} />
 
         <Movies
           receiveMainPoster={this.receiveMainPoster}

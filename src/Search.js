@@ -60,10 +60,11 @@ class Search extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <input
           onChange={this.handleChange}
+          className="app__header--input"
           placeholder="Lights... Camera..."
           type="text"
         />
-        <button>Action</button>
+        <button className="app__header--button">Action</button>
       </form>
     );
   }

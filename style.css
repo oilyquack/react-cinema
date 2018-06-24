@@ -4,6 +4,9 @@
 
 body {
   margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  background: rgb(248, 248, 248);
+  color: rgb(49, 49, 49);
 }
 
 .app__header {
@@ -13,9 +16,18 @@ body {
   box-shadow: 0 8px 6px -6px black;
 }
 
+.app__header--input {
+  width: 80%;
+  font-size: 30px;
+}
+
+.app__header--button {
+  width: 30%;
+  font-size: 30px;
+}
+
 .app__display {
-  height: 60vh;
-  border: solid 2px black;
+  text-align: center;
 }
 
 .app__display--poster {
@@ -23,11 +35,42 @@ body {
 }
 
 .app__movies {
-  border: solid 2px black;
-  padding: 20px;
+  display: none;
 }
 
-.app__movies__movie--img {
-  height: 15vh;
-  padding: 20px;
+@media (min-width: 768px) {
+  .app__header--input {
+    width: 20%;
+    height: 5vh;
+    font-size: 20px;
+  }
+
+  .app__header--button {
+    width: 10%;
+    font-size: 20px;
+  }
+
+  .app__movies {
+    display: flex;
+    justify-content: space-between;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: solid 2px black;
+    padding: 20px;
+  }
+
+  .app__movies__movie--img {
+    max-width: 8vh;
+    padding: 7px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app__movies__movie--img {
+    max-width: 10vh;
+    padding: 4px;
+  }
 }

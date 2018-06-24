@@ -4,11 +4,16 @@ function Movie({ movie, receiveMainPoster }) {
   function handleClick(event) {
     event.preventDefault();
 
-    receiveMainPoster(movie.Poster);
+    receiveMainPoster(movie.Poster, movie);
   }
 
   return (
-    <a className="app__movies__movie" id={movie.imdbID} onClick={handleClick}>
+    <a
+      className="app__movies__movie"
+      movie={movie}
+      id={movie.imdbID}
+      onClick={handleClick}
+    >
       <img
         src={
           movie.Poster === "N/A"
