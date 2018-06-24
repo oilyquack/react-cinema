@@ -10,7 +10,9 @@ class App extends React.Component {
     this.state = {
       movies: [],
       mainPoster: "",
-      movie: []
+      movie: [],
+      mainTitle: "",
+      mainID: ""
     };
 
     this.receiver = this.receiver.bind(this);
@@ -20,15 +22,19 @@ class App extends React.Component {
   receiver(movies) {
     this.setState({
       movies: movies.Search,
-      mainPoster: movies.Search[0].Poster
+      mainPoster: movies.Search[0].Poster,
+      mainTitle: movies.Search[0].Title,
+      mainID: movies.Search[0].imdbID
     });
     console.log(movies);
   }
 
-  receiveMainPoster(mainPoster, movie) {
+  receiveMainPoster(mainPoster, mainTitle, mainID, movie) {
     this.setState({
       mainPoster,
-      movie
+      movie,
+      mainTitle,
+      mainID
     });
     console.log(movie);
   }
@@ -38,7 +44,12 @@ class App extends React.Component {
       <div className="app">
         <Header receiver={this.receiver} />
 
-        <Display mainPoster={this.state.mainPoster} movie={this.state.movie} />
+        <Display
+          mainPoster={this.state.mainPoster}
+          mainTitle={this.state.mainTitle}
+          mainID={this.state.mainID}
+          movie={this.state.movie}
+        />
 
         <Movies
           receiveMainPoster={this.receiveMainPoster}

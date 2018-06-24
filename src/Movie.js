@@ -4,7 +4,7 @@ function Movie({ movie, receiveMainPoster }) {
   function handleClick(event) {
     event.preventDefault();
 
-    receiveMainPoster(movie.Poster, movie);
+    receiveMainPoster(movie.Poster, movie.Title, movie.imdbID, movie);
   }
 
   return (

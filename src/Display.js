@@ -1,9 +1,9 @@
 import React from "react";
 
-function Display({ mainPoster, movie }) {
+function Display({ mainPoster, mainTitle, mainID }) {
   return (
     <figure className="app__display">
-      <a href={`https://www.imdb.com/title/${movie.imdbID}`} target="_blank">
+      <a href={`https://www.imdb.com/title/${mainID}`} target="_blank">
         <img
           src={
             mainPoster === "N/A"
@@ -13,7 +13,8 @@ function Display({ mainPoster, movie }) {
           className="app__display--poster"
         />
       </a>
-      <h2>{movie.Title}</h2>
+
+      <h2>{mainTitle}</h2>
     </figure>
   );
 }
